@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun login(view: View){
         val progressBar = binding.progressBar
         progressBar.visibility = View.VISIBLE
@@ -66,5 +67,4 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, TelaCentral::class.java)
         finish()
     }
-    
 }
