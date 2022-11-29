@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Me adote</string>
+
+    <string name="hint_email"> E-mail </string>
+    <string name="hint_senha"> Senha </string>
+    <string name="txt_button_entrar"> Entrar </string>
+    <string name="txt_tela_cadastro"> Não tem cadastro? Cadastre-se aqui! </string>
+</resources>
