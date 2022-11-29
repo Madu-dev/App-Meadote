@@ -1,4 +1,5 @@
 package com.example.meadote
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -55,9 +56,15 @@ class MainActivity : AppCompatActivity() {
         binding.bntEntrar.setTextColor(Color.parseColor("#FFFFFF"))
 
         Handler(Looper.getMainLooper()).postDelayed({
+            TelaCentral()
             val snackbar = Snackbar.make(view, "Login efetuado com sucesso!", Snackbar.LENGTH_SHORT)
             snackbar.show()
         }, 3000)
+    }
+
+    private fun TelaCentral(){
+        val intent = Intent(this, TelaCentral::class.java)
+        finish()
     }
     
 }
