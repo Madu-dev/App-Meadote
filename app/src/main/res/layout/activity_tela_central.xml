@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="#E4B165"
+    android:orientation="vertical"
     tools:context=".TelaCentral">
 
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/patinhas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bntAdotar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_button"
-        android:text="@string/adote_um_pet"
-        android:padding="15dp"
-        android:layout_margin="40dp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bntFeed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:background="@drawable/background_button"
         android:padding="15dp"
-        android:text="@string/feed" />
+        android:text="@string/adote_um_pet"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="457dp" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bntCadastrarPet"
@@ -35,15 +38,32 @@
         android:layout_margin="40dp"
         android:background="@drawable/background_button"
         android:padding="15dp"
-        android:text="@string/cadastre_um_pet" />
+        android:text="@string/cadastre_um_pet"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="383dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bntCuriosidades"
-        android:layout_width="match_parent"
+    <fragment
+        android:id="@+id/mainContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:background="@drawable/background_button"
-        android:padding="15dp"
-        android:text="@string/curiosidades" />
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:itemTextColor="@drawable/bottom_nav_colors"
+        android:background="@color/bottom_nav_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
