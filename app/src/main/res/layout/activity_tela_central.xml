@@ -23,10 +23,10 @@
         android:id="@+id/bntFeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
         android:background="@drawable/background_button"
-        android:text="@string/feed"
         android:padding="15dp"
-        android:layout_margin="40dp" />
+        android:text="@string/feed" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bntCadastrarPet"
